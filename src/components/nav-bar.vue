@@ -15,7 +15,6 @@ import { StoreMutations } from '@/models';
 @Component({})
 export default class NavBar extends Vue {
   public toogleTheme() {
-    console.log('done');
     this.$store.commit(StoreMutations.toogleTheme);
   }
 }

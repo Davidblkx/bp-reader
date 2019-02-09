@@ -16,7 +16,7 @@ import NavBar from '@/components/nav-bar.vue';
     NavBar,
   },
 })
-export default class Home extends Vue {
+export default class App extends Vue {
   get theme() {
     return this.$store.state.theme;
   }
