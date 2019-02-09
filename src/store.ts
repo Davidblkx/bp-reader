@@ -1,16 +1,20 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { StoreOptions } from 'vuex';
+
+import { StoreMutations, StoreState } from './models';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
+export const storeState: StoreState = {
+  theme: 'light',
+};
 
-  },
+export default new Vuex.Store(<StoreOptions<StoreState>> {
+  state: { ...storeState },
   mutations: {
-
+    [StoreMutations.toogleTheme](state: StoreState) {
+      state.theme = state.theme === 'light' ? 'dark' : 'light';
+    },
   },
-  actions: {
-
-  },
+  actions: {},
 });

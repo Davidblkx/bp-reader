@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" :class="[theme]" >
     <div id="app">
       <NavBar />
       <router-view/>
@@ -7,14 +7,28 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import NavBar from '@/components/nav-bar.vue';
+
+@Component({
+  components: {
+    NavBar,
+  },
+})
+export default class Home extends Vue {
+  get theme() {
+    return this.$store.state.theme;
+  }
+}
+</script>
+
 <style lang="scss">
 @import 'sass/main';
 body, html {
   font-family: $wf__font--default;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: color(primary);
-  background-color: color(grey-3);
   margin: 0;
   height: 100%;
 }
@@ -30,21 +44,7 @@ body, html {
 #app {
   width: 100%;
   max-width: 1024px;
-  background-color: color(grey-2);
   height: 100%;
   min-height: 100%;
 }
 </style>
-
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import NavBar from '@/components/nav-bar.vue';
-
-@Component({
-  components: {
-    NavBar,
-  },
-})
-export default class Home extends Vue {}
-</script>
-
