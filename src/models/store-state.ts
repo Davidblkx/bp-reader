@@ -1,3 +1,4 @@
+import { Post } from './post';
 import { Theme } from './themes';
 
 export interface RootState {
@@ -6,4 +7,8 @@ export interface RootState {
 
 export interface ConfigState {
   theme: Theme;
+}
+
+export interface PostsStates {
+  posts: Post[];
 }

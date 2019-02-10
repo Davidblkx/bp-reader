@@ -32,21 +32,21 @@ body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
 }
 
 .container {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 #app {
   width: 100%;
   max-width: 1024px;
-  height: 100%;
   min-height: 100%;
 }
 </style>
