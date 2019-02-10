@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+import { firestore } from 'firebase';
 import { getStoreBuilder } from 'vuex-typex';
 
 import { initFirebase } from '@/firebase';
@@ -14,7 +14,7 @@ const builder = getStoreBuilder<RootState>().module('posts', initialState);
 async function loadPosts(state: PostsStates) {
   try {
     await initFirebase();
-    const db = firebase.firestore().collection('bp-posts');
+    const db = firestore().collection('bp-posts');
     const items = await db.orderBy('date', 'desc').limit(50).get();
     items.forEach(e => state.posts.push(<Post> e.data()));
   } catch (err) {

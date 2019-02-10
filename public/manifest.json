@@ -33,11 +33,6 @@
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ios/ios-appicon-1024-1024.png",
-      "sizes": "1024x1024",
-      "type": "image/png"
-    },
-    {
       "src": "./img/icons/ios/ios-appicon-180-180.png",
       "sizes": "180x180",
       "type": "image/png"
@@ -68,16 +63,6 @@
       "type": "image/png"
     },
     {
-      "src": "./img/icons/ios/ios-launchimage-1242-2208.png",
-      "sizes": "1242x2208",
-      "type": "image/png"
-    },
-    {
-      "src": "./img/icons/ios/ios-launchimage-2208-1242.png",
-      "sizes": "2208x1242",
-      "type": "image/png"
-    },
-    {
       "src": "./img/icons/ios/ios-launchimage-640-960.png",
       "sizes": "640x960",
       "type": "image/png"
@@ -85,16 +70,6 @@
     {
       "src": "./img/icons/ios/ios-launchimage-640-1136.png",
       "sizes": "640x1136",
-      "type": "image/png"
-    },
-    {
-      "src": "./img/icons/ios/ios-launchimage-1536-2048.png",
-      "sizes": "1536x2048",
-      "type": "image/png"
-    },
-    {
-      "src": "./img/icons/ios/ios-launchimage-2048-1536.png",
-      "sizes": "2048x1536",
       "type": "image/png"
     },
     {
