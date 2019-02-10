@@ -1,8 +1,4 @@
-import Vue from 'vue';
-import { Store } from 'vuex';
-
-import { StoreState } from './models';
-
 declare module '*.vue' {
+    import Vue from 'vue';
     export default Vue;
 }

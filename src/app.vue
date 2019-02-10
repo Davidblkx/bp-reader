@@ -9,7 +9,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+
 import NavBar from '@/components/nav-bar.vue';
+import { config } from './store';
 
 @Component({
   components: {
@@ -18,7 +20,7 @@ import NavBar from '@/components/nav-bar.vue';
 })
 export default class App extends Vue {
   get theme() {
-    return this.$store.state.theme;
+    return config.state.theme;
   }
 }
 </script>

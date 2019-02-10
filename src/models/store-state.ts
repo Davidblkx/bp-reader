@@ -1,9 +1,9 @@
 import { Theme } from './themes';
 
-export interface StoreState {
-  theme: Theme;
+export interface RootState {
+  config: ConfigState;
 }
 
-export enum StoreMutations {
-  toogleTheme = 'toogleTheme',
+export interface ConfigState {
+  theme: Theme;
 }

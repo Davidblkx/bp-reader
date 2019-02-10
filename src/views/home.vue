@@ -4,7 +4,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { StoreState } from '@/models';
 import { Store } from 'vuex';
 // import HelloWorld from '@/components/HelloWorld.vue';
 

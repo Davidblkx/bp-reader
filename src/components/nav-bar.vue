@@ -2,22 +2,20 @@
   <nav class="bp-nav-bar">
     <div class="brand">Brainpickings PWA</div>
     <div class="menu">
-      <a href="#" @click="toogleTheme()">theme</a>
+      <ThemeToggler></ThemeToggler>
     </div>
   </nav>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { Payload } from 'vuex';
-import { StoreMutations } from '@/models';
 
-@Component({})
-export default class NavBar extends Vue {
-  public toogleTheme() {
-    this.$store.commit(StoreMutations.toogleTheme);
-  }
-}
+import ThemeToggler from './theme-toggler.vue';
+
+@Component({
+  components: { ThemeToggler },
+})
+export default class NavBar extends Vue {}
 </script>
 
 <style lang="scss">
@@ -27,6 +25,7 @@ export default class NavBar extends Vue {
   height: 30px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   .brand {
     display: flex;
@@ -35,6 +34,14 @@ export default class NavBar extends Vue {
     justify-content: left;
     align-items: center;
     font-weight: 800;
+  }
+
+  .menu {
+    display: flex;
+    padding: 0 15px;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
   }
 }
 </style>
